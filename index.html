@@ -3,24 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clemz clems Academy</title>
+    <title>Clemz Clems Academy</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header with Background Image */
+header {
+    background: url('header-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: aqua;
+    padding: 50px 0; /* Adjust height */
+    text-shadow:  
+        3px 3px 4px rgba(0, 0, 0, 1),  /* Main dark shadow */
+        -3px -3px 4px rgba(0, 0, 0, 0.6),  
+        3px -3px 4px rgba(0, 0, 0, 0.6),  
+        -3px 3px 4px rgba(0, 0, 0, 0.6); /* Surrounding shadows */
+}
+  
+ 
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: aqua;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow:  
+        -3px -3px 3px black,  
+         3px -3px 3px black,  
+        -3px  3px 3px black,  
+         3px  3px 3px black; /* Creates a thick shadow outline */
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: aqua;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background:   orange;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Portrait Mode */
+@media screen and (orientation: portrait) {
+    section {
+        max-width: 90%;
+    }
+}
+
+/* Landscape Mode */
+@media screen and (orientation: landscape) {
+    section {
+        max-width: 70%;
+    }
+}
+    </style>
 </head>
 <body>
     <header>
-        <h1>Clemz clems Academy</h1>
+        <h1>Clemz Clems Academy</h1>
         <nav>
             <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="about">
-        <h2>About Our School</h2>
-        <p>Clemz clems Academy is committed to excellence in education and student development.</p>
+        <h2>About My School</h2>
+        <p>Clemz Clems Academy is committed to excellence in education and student development.</p>
     </section>
 
     <section id="events">
@@ -33,16 +139,61 @@
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+        <form id="contactForm" action="https://formspree.io/f/mwpvdgeo" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
         </form>
+        <p id="confirmationMessage" style="display: none; color: green;">Message sent successfully!</p>
     </section>
 
+    <script>
+        // JavaScript for smooth scrolling
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default jump behavior
+
+                const targetId = this.getAttribute('href').substring(1); // Get section ID
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 50, // Adjust for fixed header spacing
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // JavaScript for contact form submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            var form = this;
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById("confirmationMessage").style.display = "block";
+                    form.reset(); // Clear form after submission
+                } else {
+                    alert("There was an error sending your message. Please try again.");
+                }
+            })
+            .catch(error => {
+                alert("Error: " + error.message);
+            });
+        });
+    </script>
+
     <footer>
-        <p>&copy; 2025 Clemz clems Academy. All Rights Reserved.</p>
+        <p>&copy; 2025 Clemz Clems Academy. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
