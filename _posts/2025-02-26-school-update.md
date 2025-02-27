@@ -1,4 +1,9 @@
-
+---
+layout: post
+title: School Update & Newsletter
+date: 2025-02-26
+categories: updates
+---
 ### **🏫 School Updates**  
 
 ## **📌 Students' Results - Term 2**  
