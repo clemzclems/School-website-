@@ -1,6 +1,7 @@
-# 🏫 School Updates  
 
-## 📌 **Students' Results - Term 2**  
+### **🏫 School Updates**  
+
+## **📌 Students' Results - Term 2**  
 Dear Parents & Guardians,  
 
 We are pleased to inform you that students' results for the current term are now available. Please visit the school office or check the online portal to view your child's performance.  
@@ -16,7 +17,7 @@ For any corrections or inquiries, kindly contact the school administration.
 
 ---
 
-## 📢 **Newsletter on Upcoming Term’s School Fees**  
+## **📢 Newsletter on Upcoming Term’s School Fees**  
 As we prepare for the next academic term, we kindly remind all parents and guardians of the school fees schedule.  
 
 📅 **Next Term Resumption Date:** [Insert Date]  
@@ -26,16 +27,21 @@ As we prepare for the next academic term, we kindly remind all parents and guard
 - PTA Levy: **₦[Amount]**  
 - Total Payable: **₦[Total Amount]**  
 
-💳 **Payment Methods:**  
-- Bank Transfer: [Insert Bank Details]  
-- Cash Payment at the School Bursary  
-- Online Payment via [Insert Payment Link]  
+### **💳 Payment Methods**  
+- **🏦 Bank Transfer:**  
+  - **Bank Name:** First Bank of Nigeria  
+  - **Account Name:** Elimian Clement Ehinomen  
+  - **Account Number:** 3061816508  
 
-**Note:** Late payment beyond [Insert Deadline] will attract a penalty fee of **₦[Penalty Amount]**.  
+- **🌐 Online Payment Options:**  
+  - **PayPal:** [Click Here to Pay with PayPal](https://paypal.me/clemzclems?country.x=AE&locale.x=en_US)  
+  - **Flutterwave:** [Click Here to Pay with Flutterwave](https://flutterwave.com/pay/schoolfees2025)  
+
+**Note:** Late payment beyond **[Insert Deadline]** will attract a penalty fee of **₦[Penalty Amount]**.  
 
 ---
 
-## 🎓 **Graduation Levy for Final-Year Students**  
+## **🎓 Graduation Levy for Final-Year Students**  
 To ensure a smooth graduation ceremony for our final-year students, we request all graduating students and parents to complete the **Graduation Levy** payment.  
 
 📅 **Deadline for Payment:** [Insert Date]  
@@ -51,4 +57,8 @@ For more details, visit the **School Administration Office** or contact us at:
 
 Thank you for your cooperation. Let's continue working together for a brighter future!  
 
-📌 **Clemz clemz Administration**
+📌 **Clemz Clems Administration**  
+
+---
+
+This will now display properly on your **GitHub Pages site**. Let me know if you need further adjustments! 🚀
